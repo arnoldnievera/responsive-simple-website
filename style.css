@@ -33,10 +33,35 @@ body{
     text-transform: uppercase;
     display: inline-block;
 }
+
 .btn:hover{
     background: #111;
     color: var(--primary);
 }
+
+
+.menu .menu-list .menu-item a{
+    background:none ;
+    border: 2px solid gold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 50%;
+    min-width: 110px;
+    margin: 10px auto;
+
+}
+
+.menu .menu-list .menu-item a:hover{
+    background-color: black;
+    color: var(--secondary1);
+ 
+}
+
+
+
+
 
 input,textarea{
 
@@ -72,6 +97,7 @@ nav{
 height: 70px;
 width: 100%;
 background-color: black;
+
 }
 
 .logo{
@@ -88,6 +114,15 @@ background-color: black;
     display: none;
 }
 
+.nav .nav-menu a{
+    padding: 6px 12px;
+}
+
+.nav .nav-menu a:hover{
+   
+    color: var(--primary);
+    transition: ease-in all 0.5s;
+}
 
 /* hero */
 
@@ -140,10 +175,14 @@ align-items: center;
     grid-template-columns: repeat(6,1fr);
     grid-template-columns: 1fr;
     gap: 10px;
+    padding: 20px;
 }
 
 .menu .menu-list .menu-item{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    
     
 }
 
@@ -151,12 +190,15 @@ align-items: center;
     background-color: var(--secondary);
     color: var(--secondary1);
     padding: 10px;
-    
+    text-transform: uppercase;
 }
 
 
 .menu .menu-list .menu-item img{
     width: 100%;
+    flex: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
    
 }
 .menu .menu-list .menu-item *{
@@ -172,10 +214,23 @@ align-items: center;
     background-color: #111;
 }
 
+.about .about-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+
+}
 #about h1,h3,p{
     color: var(--secondary1);
     text-align: center;
     padding: 15px 0;
+
+}
+
+#about h1,h3{
+    color: var(--primary);
+   
 
 }
 
@@ -227,7 +282,49 @@ footer{
 }
 
 /* large mobile/ tablet */
+@media only screen and (min-width: 576px) {
+
+
+
+   
+.menu .menu-list{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-menu{
+    display: flex;
+    
+}
+
+.contact .contact-form{
+    max-width: 400px;
+    margin: auto;
+}
+
+}
+
 
 /* laptop */
 
+@media only screen and (min-width: 768px) {
+   
+    .menu .menu-list{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+    }
+
+    .nav, .menu, .about , .contact{
+        padding: 0 100px;
+    }
+    
+}
 /* deskstop large screen */
