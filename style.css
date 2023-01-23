@@ -97,7 +97,7 @@ nav{
 height: 70px;
 width: 100%;
 background-color: black;
-
+position: fixed;
 }
 
 .logo{
@@ -105,6 +105,11 @@ background-color: black;
     align-items: center;
     padding: var(--paddinglr);
 }
+
+.logo span{
+ color: gold;
+}
+
 .nav h1{
     color:var(--primary) ;
     padding: auto 0;
@@ -124,8 +129,14 @@ background-color: black;
     transition: ease-in all 0.5s;
 }
 
-/* hero */
 
+.nav .logo .bars{
+    color: white;
+}
+/* hero */
+.hero{
+    padding-top: 70px;
+}
 
 .hero .hero-container{
     grid-template-columns: 1fr;
@@ -166,6 +177,7 @@ align-items: center;
 
 .menu h2,p{
     text-align: center;
+    padding: 0.5em;
 }
 #menu p{
     color: #111;
@@ -182,12 +194,11 @@ align-items: center;
     display: flex;
     flex-direction: column;
     text-align: center;
-    
-    
+    background-color: black;
 }
 
 .menu .menu-list .menu-item h4{
-    background-color: var(--secondary);
+   
     color: var(--secondary1);
     padding: 10px;
     text-transform: uppercase;
@@ -199,10 +210,16 @@ align-items: center;
     flex: 1;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
    
 }
 .menu .menu-list .menu-item *{
     color: black;
+   
+}
+
+.menu .menu-list .menu-item a{
+    color: white;
    
 }
 
@@ -284,8 +301,17 @@ footer{
 /* large mobile/ tablet */
 @media only screen and (min-width: 576px) {
 
+    .hero .hero-container{
+        grid-template-columns: 1fr 1fr;
+   
+    }
 
 
+.hero .hero-container .hero-img img{
+    display: block;
+    height:100%;
+    object-fit:cover;
+}
    
 .menu .menu-list{
     grid-template-columns: repeat(3,1fr);
